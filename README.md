@@ -6,14 +6,15 @@
 
 将同时生成模块文件夹，js,wxss,wxml文件
 以下是生成tool模块的结果示例
- /**
- * GeneratorUtil.generateModule("tool");
- * result as below
- * 	生成 F:\pro\hyc2016\pages\tool\tool.js 完成
- *	生成 F:\pro\hyc2016\pages\tool\tool.wxss 完成
- *	生成 F:\pro\hyc2016\pages\tool\tool.wxml 完成
- *
- */
+	
+	/**
+	 * GeneratorUtil.generateModule("tool");
+	 * result as below
+	 * 	生成 F:\pro\hyc2016\pages\tool\tool.js 完成
+	 *	生成 F:\pro\hyc2016\pages\tool\tool.wxss 完成
+	 *	生成 F:\pro\hyc2016\pages\tool\tool.wxml 完成
+	 *
+	 */
 ## aesUtil 解密数据
 接口如果涉及敏感数据（如wx.getUserInfo当中的 openId 和unionId ），接口的明文内容将不包含这些敏感数据。开发者如需要获取敏感数据，需要对接口返回的加密数据( encryptedData )进行对称解密。 解密算法如下：
 
@@ -22,7 +23,7 @@
 对称解密秘钥 aeskey = Base64_Decode(session_key), aeskey 是16字节
 对称解密算法初始向量 iv 会在数据接口中返回。
 
-   onLoad: function () {
+   	onLoad: function () {
     wx.login({
       success: function (res) {
 
@@ -38,7 +39,7 @@
           //发起网络请求
           ...
           
-/**
+	/**
 	 * 代码中的测试数据和微信小程序官方提供的一致
 	 * @param args
 	 */
@@ -47,7 +48,7 @@
 		String sessionKey = "tiihtNczf5v6AKRyjwEUhQ=="; 
 		AesUtil util = new AesUtil(appid, sessionKey);  
 		String encryptedData=Ftl2String.createHtmlString("enc",null); 
-//		System.out.println(encryptedData); 
+	//		System.out.println(encryptedData); 
 		String iv = "r7BXXKkLb8qrSNn05n0qiA=="; 
 		util.decryptData(encryptedData, iv);
 		
